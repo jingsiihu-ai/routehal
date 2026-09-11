@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this research prototype, please cite the software."
+title: "RouteHal: Expert Routing Divergence Utilities for MoE Vision-Language Models"
+type: software
+authors:
+  - family-names: Hu
+    given-names: Jingsi
+repository-code: "https://github.com/jingsiihu-ai/routehal"
+license: MIT
+version: 0.1.0
+date-released: 2026-09-11
