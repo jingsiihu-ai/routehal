@@ -6,6 +6,12 @@
 
 RouteHal is a small, framework-agnostic research prototype for measuring whether a generated token's Mixture-of-Experts routing pattern is aligned with the visual evidence it attends to.
 
+## Method overview
+
+<p align="center">
+  <img src="docs/assets/method_overview.png" alt="RouteHal: attention-weighted visual routing divergence for grounded and hallucinated token detection" width="100%" />
+</p>
+
 
 The repository implements the core `H_route` signal described in *RouteHal: Expert Routing Divergence as a Hallucination Signal in MoE Vision-Language Models*:
 
