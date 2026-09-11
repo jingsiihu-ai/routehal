@@ -1,5 +1,9 @@
 # RouteHal
 
+[![Tests](https://github.com/jingsiihu-ai/routehal/actions/workflows/tests.yml/badge.svg)](https://github.com/jingsiihu-ai/routehal/actions/workflows/tests.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 RouteHal is a small, framework-agnostic research prototype for measuring whether a generated token's Mixture-of-Experts routing pattern is aligned with the visual evidence it attends to.
 
 The repository implements the core `H_route` signal described in *RouteHal: Expert Routing Divergence as a Hallucination Signal in MoE Vision-Language Models*:
@@ -48,6 +52,8 @@ print(result.per_layer)
 ```
 
 All probability tensors are normalized defensively. The implementation supports NumPy arrays and validates shapes, finite values, and non-negative inputs.
+
+For the equations, tensor conventions, and integration boundary, see [docs/method.md](docs/method.md).
 
 ## Model integration
 
