@@ -34,6 +34,34 @@ class RouteHalCoreTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "visual_router_probs"):
             visual_routing_prototype(np.ones((2, 3, 4)), np.ones((2, 3)))
 
+    def test_layer_weights_change_the_aggregate(self):
+        visual = np.array([
+            [[[0.9, 0.1]]],
+            [[[0.1, 0.9]]],
+        ])
+        attention = np.ones((2, 1, 1))
+        text = np.array([
+            [[0.9, 0.1]],
+            [[0.9, 0.1]],
+        ])
+        uniform = compute_hroute(text, visual, attention)
+        first_only = compute_hroute(text, visual, attention, layer_weights=[1.0, 0.0])
+        self.assertLess(first_only.per_example[0], uniform.per_example[0])
+
+    def test_calibration_applies_z_score(self):
+        visual = np.array([[[[0.8, 0.2]]]])
+        attention = np.ones((1, 1, 1))
+        text = np.array([[[0.2, 0.8]]])
+        raw = compute_hroute(text, visual, attention)
+        calibrated = compute_hroute(
+            text,
+            visual,
+            attention,
+            calibration_mean=raw.per_example - 0.5,
+            calibration_std=0.5,
+        )
+        np.testing.assert_allclose(calibrated.per_example, 1.0)
+
 
 if __name__ == "__main__":
     unittest.main()
