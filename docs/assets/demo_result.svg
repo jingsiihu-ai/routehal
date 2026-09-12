@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">RouteHal deterministic synthetic demo</title>
+  <desc id="desc">Aligned routing scores zero while deliberately mismatched routing scores 0.4068.</desc>
+  <rect width="900" height="300" rx="22" fill="#0d1117"/>
+  <text x="44" y="54" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="25" font-weight="700">Deterministic routing sanity check</text>
+  <text x="44" y="86" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">normalized Jensen–Shannon divergence · seed 7</text>
+  <text x="44" y="146" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">aligned</text>
+  <rect x="192" y="124" width="600" height="30" rx="8" fill="#21262d"/>
+  <circle cx="192" cy="139" r="10" fill="#3fb950"/>
+  <text x="812" y="146" fill="#3fb950" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" text-anchor="end">0.0000</text>
+  <text x="44" y="211" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">mismatched</text>
+  <rect x="192" y="189" width="600" height="30" rx="8" fill="#21262d"/>
+  <rect x="192" y="189" width="244" height="30" rx="8" fill="#f0883e"/>
+  <text x="812" y="211" fill="#f0883e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" text-anchor="end">0.4068</text>
+  <text x="44" y="265" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">Synthetic tensors only · no model-level accuracy claim</text>
+</svg>
