@@ -6,6 +6,10 @@
 
 RouteHal is a small, framework-agnostic research prototype for measuring whether a generated token's Mixture-of-Experts routing pattern is aligned with the visual evidence it attends to.
 
+<p align="center">
+  <img src="docs/assets/demo_result.svg" alt="Deterministic RouteHal demo: aligned score 0.0000 and mismatched score 0.4068" width="760" />
+</p>
+
 ## Method overview
 
 <p align="center">
@@ -37,6 +41,13 @@ python examples/synthetic_demo.py
 
 Expected behavior: a token whose routing matches the attended visual prototype receives a low score, while a deliberately mismatched token receives a higher score.
 
+Expected output:
+
+```text
+aligned score:    0.0
+mismatched score: 0.4068
+```
+
 Run the tests with:
 
 ```bash
@@ -61,6 +72,7 @@ print(result.per_layer)
 All probability tensors are normalized defensively. The implementation supports NumPy arrays and validates shapes, finite values, and non-negative inputs.
 
 For the equations, tensor conventions, and integration boundary, see [docs/method.md](docs/method.md).
+For reproducible demo and CPU benchmark results, see [results.md](results.md).
 
 ## Model integration
 
